@@ -20,7 +20,7 @@ class NumberLister extends Component {
     }
 
     onSelectClick = number => {
-        const copy = this.findAndChange(number.id, n => n.selected = !n.selected) //make cleaner;
+        const copy = this.findAndChange(number.id, n => n.selected = !n.selected) 
         this.setState({numbers : copy});
     }
     
