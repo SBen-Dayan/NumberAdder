@@ -10,7 +10,7 @@ class NumbersList extends Component {
                 <div className="col-md-6 col-md-offset-3">
                     <h3>Selected Numbers </h3>
                     <ul className="list-group">
-                    {numbers.filter(n => n.selected).map(n =>
+                    {numbers.map(n =>
                         <NumberListItem 
                         key={n.id} 
                         onLockClick={onLockClick} 

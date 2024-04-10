@@ -54,7 +54,7 @@ class NumberLister extends Component {
                 onSelectClick={this.onSelectClick}/>
                 <br/>
                 <NumbersList
-                numbers={numbers}
+                        numbers={numbers.filter(n => n.selected)}
                 onLockClick={this.onLockClick}/>
             </div>
             </>
