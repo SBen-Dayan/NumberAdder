@@ -6,7 +6,7 @@ class NumbersTable extends Component {
         const {numbers, onSelectClick} = this.props;
         return (
             <>
-            <table className="table table-hover table-striped table-bordered">
+            <table className="table table-hover table-striped table-bordered mt-5">
                 <thead>
                     <tr>
                         <td>Number</td>

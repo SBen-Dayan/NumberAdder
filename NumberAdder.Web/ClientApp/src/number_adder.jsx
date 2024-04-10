@@ -20,23 +20,21 @@ class NumberLister extends Component {
     }
 
     onSelectClick = number => {
-        const copy = this.findAndChange(number.id, n => n.selected = !n.selected) 
-        this.setState({numbers : copy});
+        this.findAndChangeState(number.id, n => n.selected = !n.selected) 
     }
     
     onLockClick = number => {
-        const copy = this.findAndChange(number.id, n => n.locked = !n.locked)
-        this.setState({numbers : copy});
+        this.findAndChangeState(number.id, n => n.locked = !n.locked)  
     }
     
-    findAndChange = (numberId, cb) => {
+    findAndChangeState = (numberId, cb) => {
         const copy = [...this.state.numbers];
         const number = copy.find(n => n.id == numberId);
         if (!number) {
             return;
         }
         cb(number);
-        return copy;
+        this.setState({numbers : copy});
     }
 
     randomNumber = function () {
